@@ -6,8 +6,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <title>{{env('APP_NAME')}}</title>
     <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
-<body>
+<body class="bg-gray-200 h-screen w-screen">
 @if (Auth::check())
     <script>
         window.Laravel = {!!json_encode([
@@ -22,7 +23,7 @@
         ])!!}
     </script>
 @endif
-<div id="app" class="bg-red-500 h-screen">
+<div id="app">
 </div>
 <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
 </body>

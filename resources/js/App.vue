@@ -1,64 +1,76 @@
 <template>
-    <div class="container">
-        <div class="text-center" style="margin: 20px 0px 20px 0px;">
-            <a href="https://shouts.dev/" target="_blank"><img src="https://i.imgur.com/Nt3kJXa.png"></a><br>
-            <span class="text-secondary">Laravel SPA with Vue 3, Auth (Sanctum), CURD Example</span>
-        </div>
+    <div class="">
+        <nav class="navbar flex justify-between items-center px-4 py-2 w-full bg-rose">
+            <div class="logo">
+                <img src="../../public/images/Logo.png" alt="" class="w-24">
+            </div>
+            <div class="menu w-2/4 hidden sm:block text-white uppercase text-base md:text-lg">
+                <ul class="flex  justify-around items-center">
+                    <li>
+                        <router-link to="">Accueil</router-link>
+                    </li>
+                    <li>
+                        <router-link to="">La carte</router-link>
+                    </li>
+                    <li>
+                        <router-link to="">Trouvez-nous</router-link>
+                    </li>
+                    <li>
+                        <router-link to="">Nos valeurs</router-link>
+                    </li>
+                </ul>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse">
-                <!-- for logged-in user-->
-                <div class="navbar-nav" v-if="isLoggedIn">
-                    <router-link to="/dashboard" class="nav-item nav-link">Dashboard</router-link>
-                    <router-link to="/books" class="nav-item nav-link">Books</router-link>
-                    <a class="nav-item nav-link" style="cursor: pointer;" @click="logout">Logout</a>
-                </div>
-                <!-- for non-logged user-->
-                <div class="navbar-nav" v-else>
-                    <router-link to="/" class="nav-item nav-link">Home</router-link>
-                    <router-link to="/login" class="nav-item nav-link">login</router-link>
-                    <router-link to="/register" class="nav-item nav-link">Register
-                    </router-link>
-                    <router-link to="/about" class="nav-item nav-link">About</router-link>
-                </div>
+
+            </div>
+            <div class="block sm:hidden menu w-2/4 text-white uppercase text-lg">
+
+                <ul class="flex justify-around items-center">
+                    <li>
+                        <router-link to="">Acceuil</router-link>
+                    </li>
+                </ul>
+            </div>
+            <div class="compte text-white flex items-center">
+                <i class="fas fa-user fa-2x mr-4"></i>
+                <i class="fas fa-shopping-cart fa-2x"></i>
             </div>
         </nav>
-        <br/>
-        <router-view/>
+        <router-view />
     </div>
 </template>
 
 <script>
-export default {
-    name: "App",
-    data() {
-        return {
-            isLoggedIn: false,
-        }
-    },
-    created() {
-        if (window.Laravel.isLoggedin) {
-            this.isLoggedIn = true
-        }
-    },
-    methods: {
-        logout(e) {
-            console.log('ss')
-            e.preventDefault()
-            this.$axios.get('/sanctum/csrf-cookie').then(response => {
-                this.$axios.post('/api/logout')
-                    .then(response => {
-                        if (response.data.success) {
-                            window.location.href = "/"
-                        } else {
-                            console.log(response)
-                        }
-                    })
-                    .catch(function (error) {
-                        console.error(error);
-                    });
-            })
-        }
-    },
-}
+    export default {
+        name: "App",
+        data() {
+            return {
+                isLoggedIn: false,
+            };
+        },
+        created() {
+            if (window.Laravel.isLoggedin) {
+                this.isLoggedIn = true;
+            }
+        },
+        methods: {
+            logout(e) {
+                console.log("ss");
+                e.preventDefault();
+                this.$axios.get("/sanctum/csrf-cookie").then((response) => {
+                    this.$axios
+                        .post("/api/logout")
+                        .then((response) => {
+                            if (response.data.success) {
+                                window.location.href = "/";
+                            } else {
+                                console.log(response);
+                            }
+                        })
+                        .catch(function (error) {
+                            console.error(error);
+                        });
+                });
+            },
+        },
+    };
 </script>

@@ -7,7 +7,7 @@
     <title>{{env('APP_NAME')}}</title>
     <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet"/>
 </head>
-<body>
+<body class="bg-gray-100 h-screen">
 @if (Auth::check())
     <script>
         window.Laravel = {!!json_encode([
@@ -22,7 +22,7 @@
         ])!!}
     </script>
 @endif
-<div id="app" class="bg-red-500 h-screen">
+<div id="app">
 </div>
 <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
 </body>
