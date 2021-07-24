@@ -18,7 +18,7 @@
                 <div class="flex flex-col justify-center px-6 ">
                     <div class="flex items-center w-full py-2">
                         <i class="fas fa-hotdog mr-8"></i>
-                        <p>Cervelass</p>
+                        <p>Cervelas</p>
                     </div>
                     <div class="flex items-center  w-full py-2">
                         <i class="fas fa-hotdog mr-8"></i>
