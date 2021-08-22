@@ -40,8 +40,10 @@
         <router-view />
 
         <footer>
-            <div class="h-8 border-t border-rose bg-white">
-                <h1>Test</h1>
+            <div class="h-8 border-t border-rose bg-white flex justify-between items-center px-4">
+                <router-link to="/mentions-legales" class="text-sm"> Mention Légale</router-link>
+                <p class="text-sm">@ValentineDesseaux</p>
+                <p class="text-sm">Tout droits réservées</p>
             </div>
         </footer>
     </div>

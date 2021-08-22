@@ -8,6 +8,7 @@ import Carte from '../pages/carte';
 import Valeurs from '../pages/nos-valeurs';
 import Trouvez from '../pages/Trouvez-nous';
 import Commandes from '../pages/commandes';
+import Mentions from '../pages/mentions'
 
 
 export const routes = [
@@ -50,7 +51,13 @@ export const routes = [
         name: 'commandes',
         path: '/commandes',
         component: Commandes
+    },
+    {
+        name: 'mentions',
+        path: '/mentions-legales',
+        component: Mentions
     }
+
 
 ];
 
