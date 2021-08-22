@@ -56,8 +56,11 @@
             </div>
 
         </div>
-        <button
-            class="text-lg text-gray-200 uppercase bg-gradient-to-l from-rose to-orange py-2 px-8 rounded-md text-bold">Commander</button>
+        <router-link to="/carte">
+
+            <button
+                class="text-lg text-gray-200 uppercase bg-gradient-to-l from-rose to-orange py-2 px-8 rounded-md text-bold">Commander</button>
+        </router-link>
 
     </div>
 </template>

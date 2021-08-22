@@ -2,21 +2,23 @@
     <div class="">
         <nav class="navbar flex justify-between items-center px-4 py-2 w-full bg-rose">
             <div class="logo">
-                <img src="../../public/images/Logo.png" alt="" class="w-24">
+                <router-link to="/">
+                    <img src="../../public/images/Logo.png" alt="" class="w-24">
+                </router-link>
             </div>
             <div class="menu w-2/4 hidden sm:block text-white uppercase text-base md:text-lg">
                 <ul class="flex  justify-around items-center">
                     <li>
-                        <router-link to="">Accueil</router-link>
+                        <router-link to="/">Accueil</router-link>
                     </li>
                     <li>
-                        <router-link to="">La carte</router-link>
+                        <router-link to="/carte">La carte</router-link>
                     </li>
                     <li>
                         <router-link to="">Trouvez-nous</router-link>
                     </li>
                     <li>
-                        <router-link to="">Nos valeurs</router-link>
+                        <router-link to="/nos-valeurs">Nos valeurs</router-link>
                     </li>
                 </ul>
 
@@ -31,7 +33,7 @@
                 </ul>
             </div>
             <div class="compte text-white flex items-center">
-                <i class="fas fa-user fa-2x mr-4"></i>
+                <router-link to="/dashboard"><i class="fas fa-user fa-2x mr-4"></i></router-link>
                 <i class="fas fa-shopping-cart fa-2x"></i>
             </div>
         </nav>
