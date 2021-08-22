@@ -18331,8 +18331,8 @@ __webpack_require__.r(__webpack_exports__);
       e.preventDefault();
 
       if (this.password.length > 0) {
-        this.$axios.get('/sanctum/csrf-cookie').then(function (response) {
-          _this.$axios.post('api/register', {
+        this.$axios.get("/sanctum/csrf-cookie").then(function (response) {
+          _this.$axios.post("api/register", {
             name: _this.name,
             email: _this.email,
             password: _this.password
@@ -18351,7 +18351,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   beforeRouteEnter: function beforeRouteEnter(to, from, next) {
     if (window.Laravel.isLoggedin) {
-      return next('dashboard');
+      return next("dashboard");
     }
 
     next();
@@ -18654,26 +18654,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "container w-full flex justify-center items-center text-rose"
+  "class": "w-full flex justify-center items-center text-rose mt-24"
 };
 var _hoisted_2 = {
-  "class": "flex flex-wrap  justify-center"
+  "class": "flex flex-wrap justify-center"
 };
 var _hoisted_3 = {
-  "class": "md:w-2/3 pr-4 pl-4"
+  "class": "pr-4 pl-4"
 };
 var _hoisted_4 = {
   key: 0,
-  "class": "relative px-3 py-3 mb-4 border rounded bg-red-200 border-red-300 text-red-800",
+  "class": "\n            relative\n            px-3\n            py-3\n            mb-4\n            border\n            rounded\n            bg-red-200\n            border-red-300\n            text-red-800\n          ",
   role: "alert"
 };
 var _hoisted_5 = {
-  "class": "relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300 card-default"
+  "class": "\n            relative\n            flex flex-col\n            min-w-0\n            rounded\n            break-words\n            border\n            bg-white\n            border-1 border-gray-300\n            card-default\n          "
 };
 
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "py-3 px-6 mb-0 bg-gray-200 border-b-1 border-gray-300 text-gray-900"
-}, "Login", -1
+  "class": "\n              py-3\n              px-6\n              mb-0\n              bg-gray-200\n              border-b-1 border-gray-300\n              text-gray-900 text-center\n            "
+}, " Login ", -1
 /* HOISTED */
 );
 
@@ -18681,12 +18681,12 @@ var _hoisted_7 = {
   "class": "flex-auto p-6"
 };
 var _hoisted_8 = {
-  "class": "mb-4 flex flex-wrap "
+  "class": "mb-4 flex flex-wrap"
 };
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
   "for": "email",
-  "class": "sm:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normal md:text-right"
+  "class": "\n                    sm:w-1/3\n                    pr-4\n                    pl-4\n                    pt-2\n                    pb-2\n                    mb-0\n                    leading-normal\n                    md:text-right\n                  "
 }, "E-Mail Address", -1
 /* HOISTED */
 );
@@ -18695,12 +18695,12 @@ var _hoisted_10 = {
   "class": "md:w-1/2 pr-4 pl-4"
 };
 var _hoisted_11 = {
-  "class": "mb-4 flex flex-wrap "
+  "class": "mb-4 flex flex-wrap"
 };
 
 var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
   "for": "password",
-  "class": "md:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normal md:text-right"
+  "class": "\n                    md:w-1/3\n                    pr-4\n                    pl-4\n                    pt-2\n                    pb-2\n                    mb-0\n                    leading-normal\n                    md:text-right\n                  "
 }, "Password", -1
 /* HOISTED */
 );
@@ -18709,18 +18709,23 @@ var _hoisted_13 = {
   "class": "md:w-1/2 pr-4 pl-4"
 };
 var _hoisted_14 = {
-  "class": "mb-4 flex flex-wrap  mb-0"
+  "class": "mb-4 flex flex-wrap mb-0"
 };
 var _hoisted_15 = {
   "class": "md:w-2/3 pr-4 pl-4 md:mx-1/3"
 };
+
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Pas de compte ?");
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
+
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [$data.error !== null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.error), 1
   /* TEXT */
   )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("form", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     id: "email",
     type: "email",
-    "class": "block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded",
+    "class": "\n                      block\n                      appearance-none\n                      w-full\n                      py-1\n                      px-2\n                      mb-1\n                      text-base\n                      leading-normal\n                      bg-white\n                      text-gray-800\n                      border border-gray-200\n                      rounded\n                    ",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $data.email = $event;
     }),
@@ -18732,7 +18737,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.email]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     id: "password",
     type: "password",
-    "class": "block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded",
+    "class": "\n                      block\n                      appearance-none\n                      w-full\n                      py-1\n                      px-2\n                      mb-1\n                      text-base\n                      leading-normal\n                      bg-white\n                      text-gray-800\n                      border border-gray-200\n                      rounded\n                    ",
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $data.password = $event;
     }),
@@ -18742,11 +18747,21 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.password]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
     type: "submit",
-    "class": "inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600",
+    "class": "\n                      inline-block\n                      align-middle\n                      text-center\n                      select-none\n                      border\n                      font-normal\n                      whitespace-no-wrap\n                      rounded\n                      py-1\n                      px-3\n                      leading-normal\n                      no-underline\n                      bg-blue-600\n                      text-white\n                      hover:bg-blue-600\n                    ",
     onClick: _cache[3] || (_cache[3] = function () {
       return $options.handleSubmit && $options.handleSubmit.apply($options, arguments);
     })
-  }, " Login ")])])])])])])])]);
+  }, " Login ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: "/register",
+    "class": "text-orange text-sm mt-4"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_16];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])])])])])])]);
 }
 
 /***/ }),
@@ -18765,26 +18780,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "container mx-auto sm:px-4"
+  "class": "container mx-auto sm:px-4 mt-24 text-rose"
 };
 var _hoisted_2 = {
-  "class": "flex flex-wrap  justify-center"
+  "class": "flex flex-wrap justify-center"
 };
 var _hoisted_3 = {
   "class": "md:w-2/3 pr-4 pl-4"
 };
 var _hoisted_4 = {
   key: 0,
-  "class": "relative px-3 py-3 mb-4 border rounded bg-red-200 border-red-300 text-red-800",
+  "class": "\n            relative\n            px-3\n            py-3\n            mb-4\n            border\n            rounded\n            bg-red-200\n            border-red-300\n            text-red-800\n          ",
   role: "alert"
 };
 var _hoisted_5 = {
-  "class": "relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300 card-default"
+  "class": "\n            relative\n            flex flex-col\n            min-w-0\n            rounded\n            break-words\n            border\n            bg-white\n            border-1 border-gray-300\n            card-default\n          "
 };
 
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "py-3 px-6 mb-0 bg-gray-200 border-b-1 border-gray-300 text-gray-900"
-}, "Register", -1
+  "class": "\n              py-3\n              px-6\n              mb-0\n              bg-gray-200\n              border-b-1 border-gray-300\n              text-gray-900 text-center\n            "
+}, " Register ", -1
 /* HOISTED */
 );
 
@@ -18792,12 +18807,12 @@ var _hoisted_7 = {
   "class": "flex-auto p-6"
 };
 var _hoisted_8 = {
-  "class": "mb-4 flex flex-wrap "
+  "class": "mb-4 flex flex-wrap"
 };
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
   "for": "name",
-  "class": "sm:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normal md:text-right"
+  "class": "\n                    sm:w-1/3\n                    pr-4\n                    pl-4\n                    pt-2\n                    pb-2\n                    mb-0\n                    leading-normal\n                    md:text-right\n                  "
 }, "Name", -1
 /* HOISTED */
 );
@@ -18806,12 +18821,12 @@ var _hoisted_10 = {
   "class": "md:w-1/2 pr-4 pl-4"
 };
 var _hoisted_11 = {
-  "class": "mb-4 flex flex-wrap "
+  "class": "mb-4 flex flex-wrap"
 };
 
 var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
   "for": "email",
-  "class": "sm:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normal md:text-right"
+  "class": "\n                    sm:w-1/3\n                    pr-4\n                    pl-4\n                    pt-2\n                    pb-2\n                    mb-0\n                    leading-normal\n                    md:text-right\n                  "
 }, "E-Mail Address", -1
 /* HOISTED */
 );
@@ -18820,12 +18835,12 @@ var _hoisted_13 = {
   "class": "md:w-1/2 pr-4 pl-4"
 };
 var _hoisted_14 = {
-  "class": "mb-4 flex flex-wrap "
+  "class": "mb-4 flex flex-wrap"
 };
 
 var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
   "for": "password",
-  "class": "md:w-1/3 pr-4 pl-4 pt-2 pb-2 mb-0 leading-normal md:text-right"
+  "class": "\n                    md:w-1/3\n                    pr-4\n                    pl-4\n                    pt-2\n                    pb-2\n                    mb-0\n                    leading-normal\n                    md:text-right\n                  "
 }, "Password", -1
 /* HOISTED */
 );
@@ -18834,7 +18849,7 @@ var _hoisted_16 = {
   "class": "md:w-1/2 pr-4 pl-4"
 };
 var _hoisted_17 = {
-  "class": "mb-4 flex flex-wrap  mb-0"
+  "class": "mb-4 flex flex-wrap mb-0"
 };
 var _hoisted_18 = {
   "class": "md:w-2/3 pr-4 pl-4 md:mx-1/3"
@@ -18845,7 +18860,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("form", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     id: "name",
     type: "email",
-    "class": "block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded",
+    "class": "\n                      block\n                      appearance-none\n                      w-full\n                      py-1\n                      px-2\n                      mb-1\n                      text-base\n                      leading-normal\n                      bg-white\n                      text-gray-800\n                      border border-gray-200\n                      rounded\n                    ",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $data.name = $event;
     }),
@@ -18857,7 +18872,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.name]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     id: "email",
     type: "email",
-    "class": "block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded",
+    "class": "\n                      block\n                      appearance-none\n                      w-full\n                      py-1\n                      px-2\n                      mb-1\n                      text-base\n                      leading-normal\n                      bg-white\n                      text-gray-800\n                      border border-gray-200\n                      rounded\n                    ",
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $data.email = $event;
     }),
@@ -18869,7 +18884,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.email]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     id: "password",
     type: "password",
-    "class": "block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded",
+    "class": "\n                      block\n                      appearance-none\n                      w-full\n                      py-1\n                      px-2\n                      mb-1\n                      text-base\n                      leading-normal\n                      bg-white\n                      text-gray-800\n                      border border-gray-200\n                      rounded\n                    ",
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $data.password = $event;
     }),
@@ -18879,7 +18894,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.password]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
     type: "submit",
-    "class": "inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600",
+    "class": "\n                      inline-block\n                      align-middle\n                      text-center\n                      select-none\n                      border\n                      font-normal\n                      whitespace-no-wrap\n                      rounded\n                      py-1\n                      px-3\n                      leading-normal\n                      no-underline\n                      bg-blue-600\n                      text-white\n                      hover:bg-blue-600\n                    ",
     onClick: _cache[4] || (_cache[4] = function () {
       return $options.handleSubmit && $options.handleSubmit.apply($options, arguments);
     })
