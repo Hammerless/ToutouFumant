@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="flex flex-col justify-between h-screen">
         <nav class="navbar flex justify-between items-center px-4 py-2 w-full bg-rose">
             <div class="logo">
                 <router-link to="/">
@@ -15,7 +15,7 @@
                         <router-link to="/carte">La carte</router-link>
                     </li>
                     <li>
-                        <router-link to="">Trouvez-nous</router-link>
+                        <router-link to="/trouvez-nous">Trouvez-nous</router-link>
                     </li>
                     <li>
                         <router-link to="/nos-valeurs">Nos valeurs</router-link>
@@ -38,6 +38,12 @@
             </div>
         </nav>
         <router-view />
+
+        <footer>
+            <div class="h-8 border-t border-rose bg-white">
+                <h1>Test</h1>
+            </div>
+        </footer>
     </div>
 </template>
 

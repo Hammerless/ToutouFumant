@@ -52,7 +52,8 @@
 
                 <p>Prix : {{menu.price}} €</p>
                 <button
-                    class="text-base text-gray-200 uppercase bg-gradient-to-l from-rose to-orange py-2 px-8 rounded-md text-bold mt-4" v-on:click="order(menu.id)">
+                    class="text-base text-gray-200 uppercase bg-gradient-to-l from-rose to-orange py-2 px-8 rounded-md text-bold mt-4"
+                    v-on:click="order(menu.id)">
                     COMMANDER
                 </button>
             </div>
@@ -81,24 +82,31 @@
         },
         methods: {
             order(menu_id) {
-                if (!window.Laravel.isLoggedin) {
-                    window.location.href = "/login";
+                if (confirm('Etes-vous sure de vouloir commander ce plat ?')) {
+                    if (!window.Laravel.isLoggedin) {
+                        window.location.href = "/login";
+                    }
+
+                    if (window.Laravel.user) {
+                        var newOrder = new Object;
+                        newOrder.menu_id = menu_id;
+                        newOrder.user_id = window.Laravel.user.id;
+
+                        this.$axios.post("/api/orders", newOrder).then((response) => {
+                            alert(response.data.message);
+                        });
+                    }
+                }
+                else {
+                    alert('Commande annulé !');
                 }
 
-                if (window.Laravel.user) {
-                    var newOrder = new Object;
-                    newOrder.menu_id = menu_id;
-                    newOrder.user_id = window.Laravel.user.id;
 
-                    this.$axios.post("/api/orders", newOrder).then((response) => {
-                        alert(response.data.message);
-                    });
-                }
             }
         }
 
 
-                
+
     };
 </script>
 <style lang="css">
