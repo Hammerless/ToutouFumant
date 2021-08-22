@@ -18320,8 +18320,8 @@ __webpack_require__.r(__webpack_exports__);
       e.preventDefault();
 
       if (this.password.length > 0) {
-        axios.get('/sanctum/csrf-cookie').then(function (response) {
-          axios.post('api/register', {
+        this.$axios.get('/sanctum/csrf-cookie').then(function (response) {
+          _this.$axios.post('api/register', {
             name: _this.name,
             email: _this.email,
             password: _this.password
