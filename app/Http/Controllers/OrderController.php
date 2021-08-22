@@ -14,7 +14,15 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        if (request('user_id')){
+            $orders = Order::with(['user', 'menu'])->where('user_id', '=', request('user_id'))->get();
+        }
+        else{
+            $orders = Order::with(['user', 'menu'])->get();
+        }
+        
+
+        return $orders;
     }
 
     /**
@@ -35,7 +43,23 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'menu_id' => 'required',
+            'user_id' => 'required'
+        ]);
+
+        $order = new Order();
+        $order->menu_id = $request->get('menu_id');
+        $order->user_id = $request->get('user_id');
+        $order->steps = "1";
+        $order->is_active = true;
+
+        if ($order->save()) {
+            return response()->json(['status' => 'success', 'message' => 'Order created successfully.']);
+        } else {
+            return response()->json(['status' => 'error', 'message' => 'Order could not be created.']);
+        }
+
     }
 
     /**

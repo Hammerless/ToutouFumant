@@ -18411,6 +18411,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }
       }, _callee);
     }))();
+  },
+  methods: {
+    order: function order(menu_id) {
+      if (!window.Laravel.isLoggedin) {
+        window.location.href = "/login";
+      }
+
+      if (window.Laravel.user) {
+        var newOrder = new Object();
+        newOrder.menu_id = menu_id;
+        newOrder.user_id = window.Laravel.user.id;
+        this.$axios.post("/api/orders", newOrder).then(function (response) {
+          alert(response.data.message);
+        });
+      }
+    }
   }
 });
 
@@ -18664,15 +18680,15 @@ var _hoisted_3 = {
 };
 var _hoisted_4 = {
   key: 0,
-  "class": "\n            relative\n            px-3\n            py-3\n            mb-4\n            border\n            rounded\n            bg-red-200\n            border-red-300\n            text-red-800\n          ",
+  "class": "\r\n            relative\r\n            px-3\r\n            py-3\r\n            mb-4\r\n            border\r\n            rounded\r\n            bg-red-200\r\n            border-red-300\r\n            text-red-800\r\n          ",
   role: "alert"
 };
 var _hoisted_5 = {
-  "class": "\n            relative\n            flex flex-col\n            min-w-0\n            rounded\n            break-words\n            border\n            bg-white\n            border-1 border-gray-300\n            card-default\n          "
+  "class": "\r\n            relative\r\n            flex flex-col\r\n            min-w-0\r\n            rounded\r\n            break-words\r\n            border\r\n            bg-white\r\n            border-1 border-gray-300\r\n            card-default\r\n          "
 };
 
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "\n              py-3\n              px-6\n              mb-0\n              bg-gray-200\n              border-b-1 border-gray-300\n              text-gray-900 text-center\n            "
+  "class": "\r\n              py-3\r\n              px-6\r\n              mb-0\r\n              bg-gray-200\r\n              border-b-1 border-gray-300\r\n              text-gray-900 text-center\r\n            "
 }, " Login ", -1
 /* HOISTED */
 );
@@ -18686,7 +18702,7 @@ var _hoisted_8 = {
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
   "for": "email",
-  "class": "\n                    sm:w-1/3\n                    pr-4\n                    pl-4\n                    pt-2\n                    pb-2\n                    mb-0\n                    leading-normal\n                    md:text-right\n                  "
+  "class": "\r\n                    sm:w-1/3\r\n                    pr-4\r\n                    pl-4\r\n                    pt-2\r\n                    pb-2\r\n                    mb-0\r\n                    leading-normal\r\n                    md:text-right\r\n                  "
 }, "E-Mail Address", -1
 /* HOISTED */
 );
@@ -18700,7 +18716,7 @@ var _hoisted_11 = {
 
 var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
   "for": "password",
-  "class": "\n                    md:w-1/3\n                    pr-4\n                    pl-4\n                    pt-2\n                    pb-2\n                    mb-0\n                    leading-normal\n                    md:text-right\n                  "
+  "class": "\r\n                    md:w-1/3\r\n                    pr-4\r\n                    pl-4\r\n                    pt-2\r\n                    pb-2\r\n                    mb-0\r\n                    leading-normal\r\n                    md:text-right\r\n                  "
 }, "Password", -1
 /* HOISTED */
 );
@@ -18725,7 +18741,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("form", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     id: "email",
     type: "email",
-    "class": "\n                      block\n                      appearance-none\n                      w-full\n                      py-1\n                      px-2\n                      mb-1\n                      text-base\n                      leading-normal\n                      bg-white\n                      text-gray-800\n                      border border-gray-200\n                      rounded\n                    ",
+    "class": "\r\n                      block\r\n                      appearance-none\r\n                      w-full\r\n                      py-1\r\n                      px-2\r\n                      mb-1\r\n                      text-base\r\n                      leading-normal\r\n                      bg-white\r\n                      text-gray-800\r\n                      border border-gray-200\r\n                      rounded\r\n                    ",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $data.email = $event;
     }),
@@ -18737,7 +18753,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.email]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     id: "password",
     type: "password",
-    "class": "\n                      block\n                      appearance-none\n                      w-full\n                      py-1\n                      px-2\n                      mb-1\n                      text-base\n                      leading-normal\n                      bg-white\n                      text-gray-800\n                      border border-gray-200\n                      rounded\n                    ",
+    "class": "\r\n                      block\r\n                      appearance-none\r\n                      w-full\r\n                      py-1\r\n                      px-2\r\n                      mb-1\r\n                      text-base\r\n                      leading-normal\r\n                      bg-white\r\n                      text-gray-800\r\n                      border border-gray-200\r\n                      rounded\r\n                    ",
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $data.password = $event;
     }),
@@ -18747,7 +18763,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.password]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
     type: "submit",
-    "class": "\n                      inline-block\n                      align-middle\n                      text-center\n                      select-none\n                      border\n                      font-normal\n                      whitespace-no-wrap\n                      rounded\n                      py-1\n                      px-3\n                      leading-normal\n                      no-underline\n                      bg-blue-600\n                      text-white\n                      hover:bg-blue-600\n                    ",
+    "class": "\r\n                      inline-block\r\n                      align-middle\r\n                      text-center\r\n                      select-none\r\n                      border\r\n                      font-normal\r\n                      whitespace-no-wrap\r\n                      rounded\r\n                      py-1\r\n                      px-3\r\n                      leading-normal\r\n                      no-underline\r\n                      bg-blue-600\r\n                      text-white\r\n                      hover:bg-blue-600\r\n                    ",
     onClick: _cache[3] || (_cache[3] = function () {
       return $options.handleSubmit && $options.handleSubmit.apply($options, arguments);
     })
@@ -18790,15 +18806,15 @@ var _hoisted_3 = {
 };
 var _hoisted_4 = {
   key: 0,
-  "class": "\n            relative\n            px-3\n            py-3\n            mb-4\n            border\n            rounded\n            bg-red-200\n            border-red-300\n            text-red-800\n          ",
+  "class": "\r\n            relative\r\n            px-3\r\n            py-3\r\n            mb-4\r\n            border\r\n            rounded\r\n            bg-red-200\r\n            border-red-300\r\n            text-red-800\r\n          ",
   role: "alert"
 };
 var _hoisted_5 = {
-  "class": "\n            relative\n            flex flex-col\n            min-w-0\n            rounded\n            break-words\n            border\n            bg-white\n            border-1 border-gray-300\n            card-default\n          "
+  "class": "\r\n            relative\r\n            flex flex-col\r\n            min-w-0\r\n            rounded\r\n            break-words\r\n            border\r\n            bg-white\r\n            border-1 border-gray-300\r\n            card-default\r\n          "
 };
 
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "\n              py-3\n              px-6\n              mb-0\n              bg-gray-200\n              border-b-1 border-gray-300\n              text-gray-900 text-center\n            "
+  "class": "\r\n              py-3\r\n              px-6\r\n              mb-0\r\n              bg-gray-200\r\n              border-b-1 border-gray-300\r\n              text-gray-900 text-center\r\n            "
 }, " Register ", -1
 /* HOISTED */
 );
@@ -18812,7 +18828,7 @@ var _hoisted_8 = {
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
   "for": "name",
-  "class": "\n                    sm:w-1/3\n                    pr-4\n                    pl-4\n                    pt-2\n                    pb-2\n                    mb-0\n                    leading-normal\n                    md:text-right\n                  "
+  "class": "\r\n                    sm:w-1/3\r\n                    pr-4\r\n                    pl-4\r\n                    pt-2\r\n                    pb-2\r\n                    mb-0\r\n                    leading-normal\r\n                    md:text-right\r\n                  "
 }, "Name", -1
 /* HOISTED */
 );
@@ -18826,7 +18842,7 @@ var _hoisted_11 = {
 
 var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
   "for": "email",
-  "class": "\n                    sm:w-1/3\n                    pr-4\n                    pl-4\n                    pt-2\n                    pb-2\n                    mb-0\n                    leading-normal\n                    md:text-right\n                  "
+  "class": "\r\n                    sm:w-1/3\r\n                    pr-4\r\n                    pl-4\r\n                    pt-2\r\n                    pb-2\r\n                    mb-0\r\n                    leading-normal\r\n                    md:text-right\r\n                  "
 }, "E-Mail Address", -1
 /* HOISTED */
 );
@@ -18840,7 +18856,7 @@ var _hoisted_14 = {
 
 var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
   "for": "password",
-  "class": "\n                    md:w-1/3\n                    pr-4\n                    pl-4\n                    pt-2\n                    pb-2\n                    mb-0\n                    leading-normal\n                    md:text-right\n                  "
+  "class": "\r\n                    md:w-1/3\r\n                    pr-4\r\n                    pl-4\r\n                    pt-2\r\n                    pb-2\r\n                    mb-0\r\n                    leading-normal\r\n                    md:text-right\r\n                  "
 }, "Password", -1
 /* HOISTED */
 );
@@ -18860,7 +18876,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("form", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     id: "name",
     type: "email",
-    "class": "\n                      block\n                      appearance-none\n                      w-full\n                      py-1\n                      px-2\n                      mb-1\n                      text-base\n                      leading-normal\n                      bg-white\n                      text-gray-800\n                      border border-gray-200\n                      rounded\n                    ",
+    "class": "\r\n                      block\r\n                      appearance-none\r\n                      w-full\r\n                      py-1\r\n                      px-2\r\n                      mb-1\r\n                      text-base\r\n                      leading-normal\r\n                      bg-white\r\n                      text-gray-800\r\n                      border border-gray-200\r\n                      rounded\r\n                    ",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $data.name = $event;
     }),
@@ -18872,7 +18888,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.name]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     id: "email",
     type: "email",
-    "class": "\n                      block\n                      appearance-none\n                      w-full\n                      py-1\n                      px-2\n                      mb-1\n                      text-base\n                      leading-normal\n                      bg-white\n                      text-gray-800\n                      border border-gray-200\n                      rounded\n                    ",
+    "class": "\r\n                      block\r\n                      appearance-none\r\n                      w-full\r\n                      py-1\r\n                      px-2\r\n                      mb-1\r\n                      text-base\r\n                      leading-normal\r\n                      bg-white\r\n                      text-gray-800\r\n                      border border-gray-200\r\n                      rounded\r\n                    ",
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $data.email = $event;
     }),
@@ -18884,7 +18900,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.email]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     id: "password",
     type: "password",
-    "class": "\n                      block\n                      appearance-none\n                      w-full\n                      py-1\n                      px-2\n                      mb-1\n                      text-base\n                      leading-normal\n                      bg-white\n                      text-gray-800\n                      border border-gray-200\n                      rounded\n                    ",
+    "class": "\r\n                      block\r\n                      appearance-none\r\n                      w-full\r\n                      py-1\r\n                      px-2\r\n                      mb-1\r\n                      text-base\r\n                      leading-normal\r\n                      bg-white\r\n                      text-gray-800\r\n                      border border-gray-200\r\n                      rounded\r\n                    ",
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $data.password = $event;
     }),
@@ -18894,7 +18910,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.password]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
     type: "submit",
-    "class": "\n                      inline-block\n                      align-middle\n                      text-center\n                      select-none\n                      border\n                      font-normal\n                      whitespace-no-wrap\n                      rounded\n                      py-1\n                      px-3\n                      leading-normal\n                      no-underline\n                      bg-blue-600\n                      text-white\n                      hover:bg-blue-600\n                    ",
+    "class": "\r\n                      inline-block\r\n                      align-middle\r\n                      text-center\r\n                      select-none\r\n                      border\r\n                      font-normal\r\n                      whitespace-no-wrap\r\n                      rounded\r\n                      py-1\r\n                      px-3\r\n                      leading-normal\r\n                      no-underline\r\n                      bg-blue-600\r\n                      text-white\r\n                      hover:bg-blue-600\r\n                    ",
     onClick: _cache[4] || (_cache[4] = function () {
       return $options.handleSubmit && $options.handleSubmit.apply($options, arguments);
     })
@@ -18950,12 +18966,6 @@ var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 /* HOISTED */
 );
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
-  "class": "text-base text-gray-200 uppercase bg-gradient-to-l from-rose to-orange py-2 px-8 rounded-md text-bold mt-4"
-}, " COMMANDER ", -1
-/* HOISTED */
-);
-
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [$data.menus ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     key: 0
@@ -18970,7 +18980,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* UNKEYED_FRAGMENT */
     ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, "Prix : " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(menu.price) + " €", 1
     /* TEXT */
-    ), _hoisted_10])]);
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+      "class": "text-base text-gray-200 uppercase bg-gradient-to-l from-rose to-orange py-2 px-8 rounded-md text-bold mt-4",
+      onClick: function onClick($event) {
+        return $options.order(menu.id);
+      }
+    }, " COMMANDER ", 8
+    /* PROPS */
+    , ["onClick"])])]);
   }), 256
   /* UNKEYED_FRAGMENT */
   )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])], 64

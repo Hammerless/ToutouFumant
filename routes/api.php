@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\API\BookController;
 use App\Http\Controllers\API\UserController;
 
@@ -11,3 +12,4 @@ Route::post('logout', [UserController::class, 'logout'])->middleware('auth:sanct
 
 
 Route::apiResource('menus', MenuController::class);
+Route::apiResource('orders', OrderController::class);
